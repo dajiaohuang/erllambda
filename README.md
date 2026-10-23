@@ -148,12 +148,12 @@ rebar3 erllambda zip
 - create your AWS Lambda function 
 
 ```
-aws --profile default --region <region> \ 
+aws --profile default --region <region> \
  lambda create-function \
  --function-name <your_function> \
  --memory-size 1024 \
  --handler <your_function_module_name> \
- --zip-file fileb://_build/prod/<your_function>-0.0.0.zip \ 
+ --zip-file fileb://_build/prod/<your_function>-0.0.0.zip \
  --runtime provided \
  --role <role-arn>
 ```
@@ -161,8 +161,8 @@ aws --profile default --region <region> \
 - or update your previously deployed AWS Lambda function
 
 ```
-aws --profile default --region <region> \ 
- lambda update-function-code /
+aws --profile default --region <region> \
+ lambda update-function-code \
  --function-name <your_function> \
  --zip-file fileb://_build/prod/<your_function>-0.0.0.zip
 ```
